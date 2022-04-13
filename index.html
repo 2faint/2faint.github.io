@@ -28,11 +28,6 @@
                 background-color: rgb(80, 80, 80);
             }
 
-            #owlImage {
-                margin-top: 20px;
-                height: 90px;
-            }
-
             #scriptBtn {
                 color: rgb(255, 255, 255);
                 background-color: rgb(45, 45, 45);
@@ -105,14 +100,6 @@
             <h1 style="font-family: monospace;">Exploits</h1>
             <div id="detailLine"></div>
             <br>
-            <h1 style="font-family: monospace;">Games</h1>
-            <button id="gamesBtn">VIEW</button>
-            <div id="detailLine"></div>
-            <br>
-            <h1 style="font-family: monospace; color: rgb(114, 137, 218);">Discord</h1>
-            <button id="discordBtn">JOIN</button>
-            <br>
-            <br>
             <br>
         </center>
 
@@ -124,21 +111,13 @@
 
             scriptBtn.addEventListener("click", () => {
                 const scriptBox = document.createElement("textarea");
-                scriptBox.value = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();';
+                scriptBox.value = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/2faint/skidder-x-v5/main/skidderx"))();';
                 document.body.appendChild(scriptBox);
                 scriptBox.select();
                 document.execCommand("copy");
                 document.body.removeChild(scriptBox);
                 copyPopup.style.display = "block";
                 setTimeout(() => {copyPopup.style.display = "none";}, 1000);
-            });
-
-            gamesBtn.addEventListener("click", () => {
-                window.open("https://crishoux.github.io/OwlHub/games");
-            });
-
-            discordBtn.addEventListener("click", () => {
-                window.open("https://discord.gg/FJmaX4X");
             });
         </script>
     </body>
